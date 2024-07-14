@@ -3,7 +3,9 @@ import React from "react";
 import EsimLogo from "../../assets/Images/esimlogo.svg";
 import DashboardCards from "./DashboardCards";
 import SalesCards from "./SalesCards";
+import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
+  const navigate = useNavigate()
   return (
     <div className="">
       <div className="flex items-center justify-between">
@@ -37,6 +39,8 @@ const Dashboard = () => {
                 stroke-width="1.5"
                 stroke="currentColor"
                 class="size-7"
+                style={{ cursor: "pointer" }}
+                onClick={()=> navigate("/customer-profile")}
               >
                 <path
                   stroke-linecap="round"
