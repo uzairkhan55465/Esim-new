@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Typography, TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Paper } from '@mui/material';
+import Incorrect from './Incorrect';
 
 // Generate random shop names
 const generateRandomShop = () => {
@@ -25,7 +26,13 @@ const Table1 = () => {
     { package: '8GB', time: generateRandomTime(), shop: generateRandomShop() }
   ];
 
+  const rowsData2 = [
+    { package: '2GB', stock: "10", sold: "5",Incorrect: "2", active: "3" },
+    { package: '4GB', stock: "5", sold: "3", Incorrect: "0", active: "8" }, 
+  ];
+
   return (
+    <>
     <Card>
       <Typography variant='h5' className='m-4' style={{ backgroundColor: 'white', fontWeight: 'bold', padding: '10px' }}>
         Last 0 Sales
@@ -51,6 +58,36 @@ const Table1 = () => {
         </Table>
       </TableContainer>
     </Card>
+    <br/>
+
+
+    <Card> 
+      <TableContainer component={Paper} className='overflow-x-auto' >
+        <Table>
+          <TableHead style={{ backgroundColor: 'white' }}>
+            <TableRow>
+              <TableCell>Package</TableCell>
+              <TableCell>Stock</TableCell>
+              <TableCell>Sold</TableCell>
+              <TableCell>Incorrect</TableCell>
+              <TableCell>Active</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody style={{ backgroundColor: '#f0f0f0' }}>
+            {rowsData2.map((row, index) => (
+              <TableRow key={index}>
+                <TableCell>{row.package}</TableCell>
+                <TableCell>{row.stock}</TableCell>
+                <TableCell>{row.sold}</TableCell>
+                <TableCell>{row.Incorrect}</TableCell>
+                <TableCell>{row.active}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Card>
+    </>
   );
 }
 

@@ -18,6 +18,8 @@ import Companies from "./pages/DealerManagement/Companies";
 import "./App.css";
 import CustomerManagement from "./pages/Customersmanagment/CusmtomerManagement";
 import Login from "./pages/Login/Login";
+import CustomerProfile from "./pages/Customersmanagment/CustomerProfile";
+import EsimDataPlans from "./pages/Customersmanagment/EsimDataPlans";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="financial-dashboard" element={<FinancialDashboard />} />
           <Route path="dealer-management/companies" element={<Companies />} />
           <Route path="customer-management" element={<CustomerManagement />} />
+          <Route path="customer-profile" element={<CustomerProfile />} />
+          <Route path="Esim-Data-Plans" element={<EsimDataPlans />} />
           {/* <Route path="dealer-management/branches" element={<Branches />} />
           <Route path="user-management/all-users" element={<AllUsers />} />
           <Route path="user-management/add-user" element={<AddUser />} />

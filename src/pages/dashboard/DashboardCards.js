@@ -50,10 +50,7 @@ const DashboardCards = () => {
       <Grid item xs={12} md={12}>
         <Table1/>
       </Grid>
-
-      <Grid item xs={12} md={12}>
-        <Table1/>
-      </Grid>
+ 
 
       {/* <Grid item xs={12} md={12}>
         <CircularCharts/>
