@@ -16,7 +16,7 @@ import FinancialDashboard from "./pages/financal-dashboard/financialDashboard";
 // import Packages from './pages/Packages';
 // import Plans from './pages/Plans';
 import "./App.css";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 
 function App() {
   return (

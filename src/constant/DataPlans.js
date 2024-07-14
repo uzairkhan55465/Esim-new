@@ -50,3 +50,26 @@ export const DataPlans = [
     price: "$15.00",
   },
 ];
+
+export const TotalCardsData = [
+  {
+    id: 1,
+    title: "Total Purchase",
+    price: "$15.00",
+  },
+  {
+    id: 2,
+    title: "Total Sales",
+    price: "$15.00",
+  },
+  {
+    id: 3,
+    title: "Total Profit",
+    price: "$15.00",
+  },
+  {
+    id: 4,
+    title: "Refunds",
+    price: "$15.00",
+  },
+];
