@@ -16,14 +16,17 @@ import FinancialDashboard from "./pages/financal-dashboard/financialDashboard";
 // import Packages from './pages/Packages';
 // import Plans from './pages/Plans';
 import "./App.css";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<MainLayout />}>
+
           <Route index element={<Dashboard />} />
           <Route path="financial-dashboard" element={<FinancialDashboard />} />
+          <Route path="/login" element={<Login />} />
           {/* <Route path="dealer-management/companies" element={<Companies />} />
           <Route path="dealer-management/branches" element={<Branches />} />
           <Route path="user-management/all-users" element={<AllUsers />} />
