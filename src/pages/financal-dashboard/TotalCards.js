@@ -1,19 +1,16 @@
 import React from "react";
-import { DataPlans } from "../../constant/DataPlans";
-import Card from "./DetailsCards";
-import { DetailsCardsPlan } from "../../constant/DetailsPlan";
-import TotalCards from "./TotalCards";
+import { TotalCardsData } from "../../constant/DataPlans";
 
-const FinancialDashboard = () => {
+const TotalCards = () => {
   return (
-    <>
+    <div>
       <div className="flex items-center mt-8 mb-8 ">
         <hr className="w-[44%]  text-[#fff] bg-[#fff] p-[1.5px]" />
         <h3 className="ps-2 pe-2">Data Plans</h3>
         <hr className="w-[44%]  text-[#fff] bg-[#fff] p-[1.5px]" />
       </div>
       <div className="flex justify-center flex-wrap gap-4">
-        {DataPlans?.map((item) => {
+        {TotalCardsData?.map((item) => {
           return (
             <div key={item?.id} className="">
               <div className="block w-[180px] p-4 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
@@ -46,19 +43,8 @@ const FinancialDashboard = () => {
           );
         })}
       </div>
-      <TotalCards />
-      <div className="flex items-center mt-8 mb-8 ">
-        <hr className="w-[44%]  text-[#fff] bg-[#fff] p-[1.5px]" />
-        <h3 className="ps-2 pe-2">Details </h3>
-        <hr className="w-[44%]  text-[#fff] bg-[#fff] p-[1.5px]" />
-      </div>
-      <div className="flex flex-wrap justify-center">
-        {DetailsCardsPlan?.map((item, index) => (
-          <Card key={index} {...item} />
-        ))}
-      </div>{" "}
-    </>
+    </div>
   );
 };
 
-export default FinancialDashboard;
+export default TotalCards;
